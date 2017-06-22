@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_first"
+            android:title="首   页"
+            android:icon="@drawable/ic_toys_white_24dp"/>
+
+        <item
+            android:id="@+id/nav_call"
+            android:icon="@drawable/ic_grade_white_24dp"
+            android:title="我的收藏" />
+        <item
+            android:id="@+id/nav_friends"
+            android:icon="@drawable/ic_delete_white_24dp"
+            android:title="回收站" />
+        <item
+            android:id="@+id/nav_location"
+            android:icon="@drawable/ic_person_white_24dp"
+            android:title="个人信息" />
+
+
+    </group>
+
+    <item
+        android:id="@+id/nav_quit"
+        android:icon="@drawable/ic_close_white_24dp"
+        android:title="退出登录"/>
+</menu>
