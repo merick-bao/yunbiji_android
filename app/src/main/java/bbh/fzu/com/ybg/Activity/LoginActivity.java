@@ -11,7 +11,7 @@ import bbh.fzu.com.ybg.R;
 
 /**
  * Created by MerickBao on 2017/6/21.
- * describe :
+ * describe : 登录界面
  */
 
 public class LoginActivity extends BaseActivity implements View.OnClickListener{
@@ -19,6 +19,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
     private Button login;
 
     private TextView register;
+
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,9 +57,4 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener{
         }
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        ActivityCollector.removeActivity(this);
-    }
 }
