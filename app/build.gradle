@@ -25,6 +25,12 @@ android {
         }
     }
 
+    allprojects{
+        repositories{
+            maven {url "http://jitpack.io"}
+        }
+    }
+
     repositories {
         flatDir {
             dirs 'libs' //aar的地址
@@ -53,4 +59,6 @@ dependencies {
     compile name: 'SMSSDKGUI-2.1.4', ext: 'aar'
     compile files('libs/MobCommons-2017.0321.1624.jar')
     compile files('libs/MobTools-2017.0321.1624.jar')
+    compile 'tech.michaelx.authcode:authcode:1.0.0' //短信验证码自动输入
+    compile 'com.github.mcxtzhang:SwipeDelMenuLayout:V1.2.5'
 }

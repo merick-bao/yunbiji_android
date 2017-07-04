@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.daimajia.swipe.adapters.RecyclerSwipeAdapter;
 
@@ -41,6 +42,13 @@ public class MyRecyclerViewAdapter extends RecyclerSwipeAdapter<MyRecyclerViewAd
         viewHolder.note_title.setText(note.getNote_title());
         viewHolder.note_content_abs.setText(note.getNote_content_abs());
         viewHolder.note_time.setText(note.getNote_time());
+
+        viewHolder.note_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context,"this"+String.valueOf(position),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
     @Override
     public int getItemCount() {
@@ -58,6 +66,7 @@ public class MyRecyclerViewAdapter extends RecyclerSwipeAdapter<MyRecyclerViewAd
         TextView note_title;
         TextView note_content_abs;
         TextView note_time;
+        TextView note_test;
 
         public MyViewHolder(View itemView) {
             super(itemView);
@@ -66,6 +75,7 @@ public class MyRecyclerViewAdapter extends RecyclerSwipeAdapter<MyRecyclerViewAd
             note_title = (TextView) itemView.findViewById(R.id.note_item_title);
             note_content_abs = (TextView) itemView.findViewById(R.id.note_item_abs);
             note_time = (TextView) itemView.findViewById(R.id.note_item_time);
+            note_test = (TextView) itemView.findViewById(R.id.note_item_text1);
         }
     }
 }

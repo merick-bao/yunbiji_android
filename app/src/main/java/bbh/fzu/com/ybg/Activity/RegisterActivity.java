@@ -13,6 +13,8 @@ import android.widget.Toast;
 import bbh.fzu.com.ybg.R;
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
+import tech.michaelx.authcode.AuthCode;
+import tech.michaelx.authcode.CodeConfig;
 
 /**
  * Created by MerickBao on 2017/6/21.
@@ -86,6 +88,7 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
         SMSSDK.registerEventHandler(eh);
     }
 
+
     private void inits() {
 
         getNickName = (EditText) findViewById(R.id.register_get_nickname);
@@ -107,6 +110,13 @@ public class RegisterActivity extends BaseActivity implements View.OnClickListen
                 Account = getAccount.getText().toString().trim();
                 SMSSDK.getVerificationCode("86",Account);
                 Toast.makeText(this,"验证码已发送，请注意查收",Toast.LENGTH_SHORT).show();
+                CodeConfig codeConfig = new CodeConfig.Builder()
+                        .codeLength(4)
+                        .smsFromStart(106)
+                        .smsBodyStartWith("掌淘科技")
+                        .smsBodyContains("云笔记的验证码")
+                        .build();
+                AuthCode.getInstance().with(this).config(codeConfig).into(getVerifyCode);
                 break;
 
             case R.id.register_finish_button:

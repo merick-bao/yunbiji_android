@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="bbh.fzu.com.yunbiji.Activity.MainActivity">
+    tools:context="bbh.fzu.com.ybg.Activity.MainActivity">
 
     <android.support.design.widget.CoordinatorLayout
         android:layout_width="match_parent"
@@ -42,7 +42,6 @@
                     android:layout_height="wrap_content"
                     android:hint="搜索"
                     android:maxLines="1"
-                    android:focusable="false"
                     android:drawableEnd="@drawable/ic_search_black_24dp"/>
 
                 <android.support.v7.widget.RecyclerView
@@ -50,9 +49,6 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent" />
             </LinearLayout>
-
-
-
 
         </android.support.v4.widget.SwipeRefreshLayout>
 

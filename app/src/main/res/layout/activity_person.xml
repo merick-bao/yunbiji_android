@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/person_edit_back"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_keyboard_backspace_white_24dp"/>
+
+    <RelativeLayout
+        android:id="@+id/person_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@drawable/bg_person">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:src="@drawable/person_header"
+            android:layout_marginTop="80dp"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_alignParentBottom="true">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_local_florist_white_24dp" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_brightness_high_white_24dp" />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/person_edit_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/person_layout1"
+        android:background="@drawable/person_edit_bg"
+        android:layout_marginTop="20dp"
+        android:drawableStart="@drawable/ic_face_black_24dp"
+        android:hint="昵称"/>
+
+    <EditText
+        android:id="@+id/person_edit_autograph"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/person_edit_nickname"
+        android:background="@drawable/person_edit_bg"
+        android:hint="个性签名"
+        android:drawableStart="@drawable/ic_beach_access_black_24dp"/>
+
+    <EditText
+        android:id="@+id/person_edit_mail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/person_edit_autograph"
+        android:background="@drawable/person_edit_bg"
+        android:hint="邮箱"
+        android:drawableStart="@drawable/ic_mail_outline_black_24dp"/>
+
+
+    <Button
+        android:id="@+id/person_edit_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/person_edit_bg"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:text="确认修改"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

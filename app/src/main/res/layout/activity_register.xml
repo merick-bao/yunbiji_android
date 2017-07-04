@@ -31,6 +31,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:inputType="text"
+                android:maxLength="8"
                 android:background="@drawable/editsharp"
                 android:drawableStart="@drawable/ic_face_black_24dp" />
         </android.support.design.widget.TextInputLayout>
@@ -73,6 +74,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:hint="验证码"
+                    android:inputType="number"
                     android:drawableStart="@drawable/ic_lightbulb_outline_black_24dp"
                     android:background="@drawable/editsharp"
                     android:maxLength="4"/>
