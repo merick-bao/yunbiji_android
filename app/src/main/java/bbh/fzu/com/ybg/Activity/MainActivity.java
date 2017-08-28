@@ -23,6 +23,7 @@ import java.util.Random;
 
 import bbh.fzu.com.ybg.Adapter.MyRecyclerViewAdapter;
 import bbh.fzu.com.ybg.Adapter.NoteAdapter;
+import bbh.fzu.com.ybg.Entity;
 import bbh.fzu.com.ybg.R;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener{
@@ -96,7 +97,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                         drawerLayout.closeDrawers();//关闭侧滑菜单
                         break;
                     case R.id.nav_quit:
+                        //返回登录界面
                         Intent intent1 = new Intent(MainActivity.this,LoginActivity.class);
+                        intent1.putExtra("token", Entity.ACTIVITY_MAIN);
                         startActivity(intent1);
                         finish();
                         break;
@@ -160,6 +163,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         switch (item.getItemId()){
             case R.id.toolbar_open:
                 drawerLayout.openDrawer(Gravity.LEFT);
+                break;
+            case R.id.toolbar_refresh:
+                Toast.makeText(getBaseContext(),"已同步",Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.toolbar_sort:
+                Toast.makeText(getBaseContext(),"排序",Toast.LENGTH_SHORT).show();
                 break;
             default:
                 break;
